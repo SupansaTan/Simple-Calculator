@@ -1,0 +1,45 @@
+<ActionBar title="Calculator"></ActionBar>
+
+<ScrollView>
+    <GridLayout class="home-container" columns="*" rows="2*, 5*" width="100%"
+        height="100%">
+        <GridLayout row="0" col="0" class="label-container" columns="*"
+            rows="2*, *" width="auto" height="150">
+            <Label #display_num row="0" col="0" text="0" textAlignment="Right"
+                textWrap="true" lineHeight="2">
+            </Label>
+            <Label #display_result row="1" col="0" text="="
+                textAlignment="Right">
+            </Label>
+        </GridLayout>
+
+        <GridLayout row="1" col="0" class="button-container"
+            columns="*, *, *, *" rows="*, *, *, *, *" width="auto"
+            height="auto">
+
+            <Button row="0" col="0" height="auto" text="C" value="C" class="-rounded-sm" (tap)="clear_btn()"></Button>
+            <Button row="0" col="1" height="auto" text="&divide;" value="/" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="0" col="2" height="auto" text="x&#178;" value="pow" class="-rounded-sm" (tap)="pow_btn()"></Button>
+            <Button row="0" col="3" height="auto" text="&#9003;" value="backspace" class="-rounded-sm" (tap)="backspace_btn()"></Button>
+
+            <Button row="1" col="0" height="auto" text="7" value="7" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="1" col="1" height="auto" text="8" value="8" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="1" col="2" height="auto" text="9" value="9" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="1" col="3" height="auto" text="x" value="x" class="-rounded-sm" (tap)="addExp($event)"></Button>
+
+            <Button row="2" col="0" height="auto" text="4" value="4" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="2" col="1" height="auto" text="5" value="5" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="2" col="2" height="auto" text="6" value="6" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="2" col="3" height="auto" text="-" value="-" class="-rounded-sm" (tap)="addExp($event)"></Button>
+
+            <Button row="3" col="0" height="auto" text="1" value="1" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="3" col="1" height="auto" text="2" value="2" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="3" col="2" height="auto" text="3" value="3" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="3" col="3" height="auto" text="+" value="+" class="-rounded-sm" (tap)="addExp($event)"></Button>
+
+            <Button row="4" col="0" height="auto" colSpan="2" text="0" value="0" class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="4" col="2" height="auto" text="." value="." class="-rounded-sm" (tap)="addExp($event)"></Button>
+            <Button row="4" col="3" height="auto" text="=" value="=" class="-rounded-sm" (tap)="evaluate()"></Button>
+        </GridLayout>
+    </GridLayout>
+</ScrollView>

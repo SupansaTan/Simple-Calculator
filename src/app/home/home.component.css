@@ -1,0 +1,19 @@
+button {
+    font-size: 30;
+    margin: 5px;
+    color: #4299FE;
+    background-color: whitesmoke;
+}
+
+.home-container {
+    font-size: 35;
+    vertical-align: bottom;
+}
+
+.label-container {
+    margin: 20;
+}
+
+.button-container {
+    margin: 0 10 10 10;
+}
